@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useShips } from "../../Contexts/ShipsContext";
+import { useShips } from "../../Contexts/ShipContext";
 
 const ShipForm = () => {
   const { ships, addShip, updateShip } = useShips();

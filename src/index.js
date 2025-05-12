@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from "./Contexts/AuthContext";
 import { BrowserRouter } from "react-router-dom";
-import { ShipsProvider } from "./Contexts/ShipsContext";
-
+import { ShipsProvider } from "./Contexts/ShipContext";
+import { ComponentProvider } from "./Contexts/ComponentContext";
 import { seedUsers } from "./utils/localStorageUtils";
+import { JobsProvider } from "./Contexts/JobsContext";
 seedUsers();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +16,11 @@ root.render(
   <BrowserRouter>
     <AuthProvider>
       <ShipsProvider>
-        <App />
+        <ComponentProvider>
+          <JobsProvider>
+            <App />
+          </JobsProvider>
+        </ComponentProvider>
       </ShipsProvider>
     </AuthProvider>
   </BrowserRouter>

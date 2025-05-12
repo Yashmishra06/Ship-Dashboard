@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useShips } from "../../Contexts/ShipsContext";
+import { useShips } from "../../Contexts/ShipContext";
 
 const ShipDetail = () => {
   const { id } = useParams();
